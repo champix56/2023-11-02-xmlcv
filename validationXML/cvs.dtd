@@ -1,0 +1,18 @@
+<!ELEMENT cvs (cv*)>
+<!ELEMENT cv (ident,formations)>
+<!ATTLIST cv 
+	id ID #REQUIRED>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT ident (nom,pnom,pnom?,pnom?,age?,(permis|typePermis)?)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT pnom (#PCDATA)>
+<!ELEMENT permis EMPTY>
+<!ELEMENT typePermis (#PCDATA)>
+<!ELEMENT formations (formation*)>
+<!ELEMENT formation (#PCDATA)>
+
+<!ATTLIST formation
+	niveauBAC CDATA #REQUIRED
+	obtenu (true|false) #IMPLIED
+	nbHeures CDATA #IMPLIED
+>

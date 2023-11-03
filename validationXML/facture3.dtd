@@ -1,0 +1,40 @@
+<!ENTITY euro "&#x20ac;">
+<!ELEMENT factures (facture+)>
+<!ATTLIST factures
+		rsets CDATA #REQUIRED
+		adr1ets CDATA #REQUIRED
+		adr2ets CDATA #IMPLIED
+		cpets CDATA #REQUIRED
+		villeets CDATA #REQUIRED
+		logourl CDATA #IMPLIED
+		dateeditionXML CDATA #REQUIRED
+>
+<!ELEMENT facture (client?,lignes)>
+<!ATTLIST facture
+		numfacture CDATA #REQUIRED 
+		datefacture CDATA #REQUIRED
+		type (Devis|Facture)  #REQUIRED
+		idclient CDATA #REQUIRED
+		refdevis CDATA #IMPLIED
+>
+
+<!ELEMENT client (destinataire,adr1,adr2,cp,ville)>
+<!ELEMENT destinataire (#PCDATA)>
+<!ELEMENT adr1 (#PCDATA)>
+<!ELEMENT adr2 (#PCDATA)>
+<!ELEMENT cp (#PCDATA)>
+<!ELEMENT ville (#PCDATA)>
+
+<!ELEMENT lignes (ligne+)>
+<!ELEMENT ligne (ref, designation, surface?,phtByUnit,nbUnit,stotligne)>
+<!ELEMENT ref (#PCDATA)>
+<!ELEMENT designation (#PCDATA)>
+<!ELEMENT surface (#PCDATA)>
+<!ATTLIST surface 
+		 unite CDATA #REQUIRED>
+<!ELEMENT phtByUnit (#PCDATA)>
+
+<!ELEMENT nbUnit (#PCDATA)>
+<!ATTLIST nbUnit 
+		typeUnit CDATA #IMPLIED>
+<!ELEMENT stotligne (#PCDATA)>

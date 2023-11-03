@@ -1,0 +1,29 @@
+{
+	"factures": [
+		{
+			"idfacture": "12",
+			"datefacture": "2012-08-10",
+			"total": 42.247
+		},
+		{
+			"idfacture": "23",
+			"datefacture": "2012-09-04",
+			"total": 74.625
+		},
+		{
+			"idfacture": "11",
+			"datefacture": "2012-07-05",
+			"total": 24.873
+		},
+		{
+			"idfacture": "08",
+			"datefacture": "2013-07-04",
+			"total": 69.65
+		},
+		{
+			"idfacture": "05",
+			"datefacture": "2012-06-21",
+			"total": 98.925
+		}
+	]
+}

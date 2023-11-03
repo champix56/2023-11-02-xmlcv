@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cvManuel.xsd">
+	<cv id="c235">
+		<ident>
+			<nom>DESORBAIX</nom>
+			<pnom>Alexandre</pnom>
+			<pnom>Alexandre</pnom>
+			<pnom>Alexandre</pnom>
+			<age>39</age>
+			<tel>06.64.27.63.60</tel>
+		</ident>
+		<formations>
+			<formation niveauBAC="2" obtenu="true" nbHeures="234">bts IG</formation>
+			<formation niveauBAC="3">Licence pro assistant chef de projet</formation>
+			<formation obtenu="false" niveauBAC="5">Licence pro assistant chef de projet</formation>
+		</formations>
+	</cv>
+	<cv id="C234">
+		<ident>
+			<nom>DESORBAIX</nom>
+			<pnom>Alexandre</pnom>
+			<pnom>Dominique</pnom>
+			<pnom>Joël</pnom>
+			<typePermis>ABC</typePermis>
+		</ident>
+		<formations>
+			<formation niveauBAC="+2" obtenu="true">bts IG</formation>
+			<formation niveauBAC="+3" obtenu="true">Licence pro assistant chef de projet</formation>
+			<formation niveauBAC="+5" obtenu="false">Licence pro assistant chef de projet</formation>
+		</formations>
+	</cv>
+</cvs>

@@ -1,0 +1,90 @@
+{
+  "images": [
+    {
+      "id": 0,
+      "url": "futurama_slurm.jpg",
+      "w": 600,
+      "h": 315,
+      "name": "futurama slurm"
+    },
+    {
+      "id": 1,
+      "url": "futurama_matrix.webp",
+      "w": 1280,
+      "h": 720,
+      "name": "futurama matrix"
+    }
+  ],
+  "filter": {
+    "miseenform": {
+      "italic": true
+    }
+  },
+  "memes": [
+    {
+      "id": 0,
+      "titre": "title",
+      "imageId": 0,
+      "text": "React is fun",
+      "x": 20,
+      "y": 20,
+      "fontSize": 20,
+      "fontWeight": 700,
+      "italic": true,
+      "underline": true,
+      "color": "#ACBE0F"
+    },
+    {
+      "id": 1,
+      "titre": "title2",
+      "imageId": 1,
+      "text": "React is super fun",
+      "x": 20,
+      "y": 20,
+      "fontSize": 20,
+      "fontWeight": 900,
+      "italic": false,
+      "underline": true,
+      "color": "#ACBE0F"
+    },
+    {
+      "id": 2,
+      "titre": "title2",
+      "imageId": 1,
+      "text": "React is super fun",
+      "x": 20,
+      "y": 20,
+      "fontSize": 20,
+      "fontWeight": 500,
+      "italic": true,
+      "underline": true,
+      "color": "#ACBE0F"
+    },
+    {
+      "id": 3,
+      "titre": "title2",
+      "imageId": 1,
+      "text": "React is super fun",
+      "x": 20,
+      "y": 20,
+      "fontSize": 20,
+      "fontWeight": 200,
+      "italic": true,
+      "underline": true,
+      "color": "#ACBE0F"
+    },
+    {
+      "id": 4,
+      "titre": "title2",
+      "imageId": 1,
+      "text": "React is super fun",
+      "x": 20,
+      "y": 20,
+      "fontSize": 20,
+      "fontWeight": 900,
+      "italic": true,
+      "underline": true,
+      "color": "#ACBE0F"
+    }
+  ]
+}

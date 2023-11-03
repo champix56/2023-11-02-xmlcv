@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="ST_RESTRICTED_NAME">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="2"/>
+			<xs:maxLength value="24"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="cvs">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="cv" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ident">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="nom" type="ST_RESTRICTED_NAME"/>
+										<xs:element name="pnom" type="ST_RESTRICTED_NAME" maxOccurs="3"/>
+										<xs:element name="age" minOccurs="0">
+											<xs:simpleType>
+												<xs:restriction base="xs:unsignedByte">
+													<xs:minInclusive value="5"/>
+													<xs:maxInclusive value="75"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:choice minOccurs="0">
+											<xs:element name="permis">
+												<xs:complexType/>
+											</xs:element>
+											<xs:element name="typePermis">
+												<xs:simpleType>
+													<xs:restriction base="xs:string">
+														<xs:enumeration value="A"/>
+														<xs:enumeration value="B"/>
+														<xs:enumeration value="C"/>
+														<xs:enumeration value="AB"/>
+														<xs:enumeration value="BC"/>
+														<xs:enumeration value="AC"/>
+														<xs:enumeration value="ABC"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+										</xs:choice>
+										<xs:element name="tel" minOccurs="0">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:pattern value="0[1-7](.\d{2}){4}"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="formations">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="formation" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="niveauBAC" use="required">
+															<xs:simpleType>
+																<xs:restriction base="xs:int">
+																	<xs:maxInclusive value="7"/>
+																</xs:restriction>
+															</xs:simpleType>
+														</xs:attribute>
+														<xs:attribute name="obtenu" type="xs:boolean"/>
+														<xs:attribute name="nbHeures" type="xs:int"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="id" type="xs:ID"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,468 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "$id": "http://orsys.fr/json/memes",
+    "title": "Root Schema",
+    "type": "object",
+    "default": {},
+    "required": [
+        "images",
+        "filter",
+        "memes"
+    ],
+    "properties": {
+        "images": {
+            "title": "The images Schema",
+            "type": "array",
+            "default": [],
+            "items": {
+                "title": "A Schema",
+                "type": "object",
+                "required": [
+                    "id",
+                    "url",
+                    "w",
+                    "h",
+                    "name"
+                ],
+                "properties": {
+                    "id": {
+                        "title": "The id Schema",
+                        "type": "integer",
+                        "examples": [
+                            0,
+                            1
+                        ]
+                    },
+                    "url": {
+                        "title": "The url Schema",
+                        "type": "string",
+                        "examples": [
+                            "futurama_slurm.jpg",
+                            "futurama_matrix.webp"
+                        ]
+                    },
+                    "w": {
+                        "title": "The w Schema",
+                        "type": "integer",
+                        "examples": [
+                            600,
+                            1280
+                        ]
+                    },
+                    "h": {
+                        "title": "The h Schema",
+                        "type": "integer",
+                        "examples": [
+                            315,
+                            720
+                        ]
+                    },
+                    "name": {
+                        "title": "The name Schema",
+                        "type": "string",
+                        "examples": [
+                            "futurama slurm",
+                            "futurama matrix"
+                        ]
+                    }
+                },
+                "examples": [{
+                    "id": 0,
+                    "url": "futurama_slurm.jpg",
+                    "w": 600,
+                    "h": 315,
+                    "name": "futurama slurm"
+                },
+                {
+                    "id": 1,
+                    "url": "futurama_matrix.webp",
+                    "w": 1280,
+                    "h": 720,
+                    "name": "futurama matrix"
+                }]
+            },
+            "examples": [
+                [{
+                    "id": 0,
+                    "url": "futurama_slurm.jpg",
+                    "w": 600,
+                    "h": 315,
+                    "name": "futurama slurm"
+                },
+                {
+                    "id": 1,
+                    "url": "futurama_matrix.webp",
+                    "w": 1280,
+                    "h": 720,
+                    "name": "futurama matrix"
+                }]
+            ]
+        },
+        "filter": {
+            "title": "The filter Schema",
+            "type": "object",
+            "default": {},
+            "required": [
+                "miseenform"
+            ],
+            "properties": {
+                "miseenform": {
+                    "title": "The miseenform Schema",
+                    "type": "object",
+                    "default": {},
+                    "required": [
+                        "italic"
+                    ],
+                    "properties": {
+                        "italic": {
+                            "title": "The italic Schema",
+                            "type": "boolean",
+                            "default": false,
+                            "examples": [
+                                true
+                            ]
+                        }
+                    },
+                    "examples": [{
+                        "italic": true
+                    }]
+                }
+            },
+            "examples": [{
+                "miseenform": {
+                    "italic": true
+                }
+            }]
+        },
+        "memes": {
+            "title": "The memes Schema",
+            "type": "array",
+            "default": [],
+            "items": {
+                "title": "A Schema",
+                "type": "object",
+                "required": [
+                    "id",
+                    "titre",
+                    "imageId",
+                    "text",
+                    "x",
+                    "y",
+                    "fontSize",
+                    "fontWeight",
+                    "italic",
+                    "underline",
+                    "color"
+                ],
+                "properties": {
+                    "id": {
+                        "title": "The id Schema",
+                        "type": "integer",
+                        "examples": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ]
+                    },
+                    "titre": {
+                        "title": "The titre Schema",
+                        "type": "string",
+                        "examples": [
+                            "title",
+                            "title2"
+                        ]
+                    },
+                    "imageId": {
+                        "title": "The imageId Schema",
+                        "type": "integer",
+                        "examples": [
+                            0,
+                            1
+                        ]
+                    },
+                    "text": {
+                        "title": "The text Schema",
+                        "type": "string",
+                        "examples": [
+                            "React is fun",
+                            "React is super fun"
+                        ]
+                    },
+                    "x": {
+                        "title": "The x Schema",
+                        "type": "integer",
+                        "examples": [
+                            20
+                        ]
+                    },
+                    "y": {
+                        "title": "The y Schema",
+                        "type": "integer",
+                        "examples": [
+                            20
+                        ]
+                    },
+                    "fontSize": {
+                        "title": "The fontSize Schema",
+                        "type": "integer",
+                        "examples": [
+                            20
+                        ]
+                    },
+                    "fontWeight": {
+                        "title": "The fontWeight Schema",
+                        "type": "integer",
+                        "examples": [
+                            700,
+                            900,
+                            500,
+                            200
+                        ]
+                    },
+                    "italic": {
+                        "title": "The italic Schema",
+                        "type": "boolean",
+                        "examples": [
+                            true,
+                            false
+                        ]
+                    },
+                    "underline": {
+                        "title": "The underline Schema",
+                        "type": "boolean",
+                        "examples": [
+                            true
+                        ]
+                    },
+                    "color": {
+                        "title": "The color Schema",
+                        "type": "string",
+                        "examples": [
+                            "#ACBE0F"
+                        ]
+                    }
+                },
+                "examples": [{
+                    "id": 0,
+                    "titre": "title",
+                    "imageId": 0,
+                    "text": "React is fun",
+                    "x": 20,
+                    "y": 20,
+                    "fontSize": 20,
+                    "fontWeight": 700,
+                    "italic": true,
+                    "underline": true,
+                    "color": "#ACBE0F"
+                },
+                {
+                    "id": 1,
+                    "titre": "title2",
+                    "imageId": 1,
+                    "text": "React is super fun",
+                    "x": 20,
+                    "y": 20,
+                    "fontSize": 20,
+                    "fontWeight": 900,
+                    "italic": false,
+                    "underline": true,
+                    "color": "#ACBE0F"
+                },
+                {
+                    "id": 2,
+                    "titre": "title2",
+                    "imageId": 1,
+                    "text": "React is super fun",
+                    "x": 20,
+                    "y": 20,
+                    "fontSize": 20,
+                    "fontWeight": 500,
+                    "italic": true,
+                    "underline": true,
+                    "color": "#ACBE0F"
+                },
+                {
+                    "id": 3,
+                    "titre": "title2",
+                    "imageId": 1,
+                    "text": "React is super fun",
+                    "x": 20,
+                    "y": 20,
+                    "fontSize": 20,
+                    "fontWeight": 200,
+                    "italic": true,
+                    "underline": true,
+                    "color": "#ACBE0F"
+                },
+                {
+                    "id": 4,
+                    "titre": "title2",
+                    "imageId": 1,
+                    "text": "React is super fun",
+                    "x": 20,
+                    "y": 20,
+                    "fontSize": 20,
+                    "fontWeight": 900,
+                    "italic": true,
+                    "underline": true,
+                    "color": "#ACBE0F"
+                }]
+            },
+            "examples": [
+                [{
+                    "id": 0,
+                    "titre": "title",
+                    "imageId": 0,
+                    "text": "React is fun",
+                    "x": 20,
+                    "y": 20,
+                    "fontSize": 20,
+                    "fontWeight": 700,
+                    "italic": true,
+                    "underline": true,
+                    "color": "#ACBE0F"
+                },
+                {
+                    "id": 1,
+                    "titre": "title2",
+                    "imageId": 1,
+                    "text": "React is super fun",
+                    "x": 20,
+                    "y": 20,
+                    "fontSize": 20,
+                    "fontWeight": 900,
+                    "italic": false,
+                    "underline": true,
+                    "color": "#ACBE0F"
+                },
+                {
+                    "id": 2,
+                    "titre": "title2",
+                    "imageId": 1,
+                    "text": "React is super fun",
+                    "x": 20,
+                    "y": 20,
+                    "fontSize": 20,
+                    "fontWeight": 500,
+                    "italic": true,
+                    "underline": true,
+                    "color": "#ACBE0F"
+                },
+                {
+                    "id": 3,
+                    "titre": "title2",
+                    "imageId": 1,
+                    "text": "React is super fun",
+                    "x": 20,
+                    "y": 20,
+                    "fontSize": 20,
+                    "fontWeight": 200,
+                    "italic": true,
+                    "underline": true,
+                    "color": "#ACBE0F"
+                },
+                {
+                    "id": 4,
+                    "titre": "title2",
+                    "imageId": 1,
+                    "text": "React is super fun",
+                    "x": 20,
+                    "y": 20,
+                    "fontSize": 20,
+                    "fontWeight": 900,
+                    "italic": true,
+                    "underline": true,
+                    "color": "#ACBE0F"
+                }]
+            ]
+        }
+    },
+    "examples": [{
+        "images": [{
+            "id": 0,
+            "url": "futurama_slurm.jpg",
+            "w": 600,
+            "h": 315,
+            "name": "futurama slurm"
+        },
+        {
+            "id": 1,
+            "url": "futurama_matrix.webp",
+            "w": 1280,
+            "h": 720,
+            "name": "futurama matrix"
+        }],
+        "filter": {
+            "miseenform": {
+                "italic": true
+            }
+        },
+        "memes": [{
+            "id": 0,
+            "titre": "title",
+            "imageId": 0,
+            "text": "React is fun",
+            "x": 20,
+            "y": 20,
+            "fontSize": 20,
+            "fontWeight": 700,
+            "italic": true,
+            "underline": true,
+            "color": "#ACBE0F"
+        },
+        {
+            "id": 1,
+            "titre": "title2",
+            "imageId": 1,
+            "text": "React is super fun",
+            "x": 20,
+            "y": 20,
+            "fontSize": 20,
+            "fontWeight": 900,
+            "italic": false,
+            "underline": true,
+            "color": "#ACBE0F"
+        },
+        {
+            "id": 2,
+            "titre": "title2",
+            "imageId": 1,
+            "text": "React is super fun",
+            "x": 20,
+            "y": 20,
+            "fontSize": 20,
+            "fontWeight": 500,
+            "italic": true,
+            "underline": true,
+            "color": "#ACBE0F"
+        },
+        {
+            "id": 3,
+            "titre": "title2",
+            "imageId": 1,
+            "text": "React is super fun",
+            "x": 20,
+            "y": 20,
+            "fontSize": 20,
+            "fontWeight": 200,
+            "italic": true,
+            "underline": true,
+            "color": "#ACBE0F"
+        },
+        {
+            "id": 4,
+            "titre": "title2",
+            "imageId": 1,
+            "text": "React is super fun",
+            "x": 20,
+            "y": 20,
+            "fontSize": 20,
+            "fontWeight": 900,
+            "italic": true,
+            "underline": true,
+            "color": "#ACBE0F"
+        }]
+    }]
+}
